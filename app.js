@@ -1,4 +1,7 @@
 
+// defining an empty array for storing every employee in the form of objects
+let employees = [];
+
 class Employee
 {
 
@@ -58,6 +61,12 @@ class Employee
         return "Annual Salary: " + this.annualSalary() + " | " + this.bonus() + " | " + this.tax() + " | " + this.finalSalary();
     }
 
+    // getting the experience
+    exp()
+    {
+        return this.#yrexperience;
+    }
+
 }
 
 let employee1 = new Employee(1001, "Rahul", "Sharma", "HR", 70000, 5);
@@ -95,3 +104,25 @@ console.log(employee5.yearlySal);
 // Employee6
 console.log(employee6.employeeDetail());
 console.log(employee6.yearlySal);
+
+// pushing the employee1, employee2........... to employees empty array
+employees.push(employee1, employee2, employee3, employee4, employee5, employee6);
+
+// displaying all the employees using forEach
+console.log("----------------- Active Employees ----------------------")
+employees.forEach(e=>
+{
+    console.log("-------------------");
+    console.log("Employee Id: " + e.empid + "\n" +
+                "Name: " + e.fname + " " + e.lname + "\n" +
+                "Department: " + e.dept + "\n" +
+                "Years of Experience: " + e.exp() + "\n" +
+                "Anual Salary: " + e.annualSalary() + "\n" +
+                "Bonus: " + e.bonus() + "\n" + 
+                "Tax: " + e.tax() + "\n" + 
+                "Final Salary: " + e.finalSalary() 
+    )
+    console.log("-------------------");
+
+}
+)
