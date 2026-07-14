@@ -39,24 +39,72 @@ class Employee
     bonus()
     {
         // creating bonuses for specific departments
-        if(this.dept == "Frontend Web Developer" || this.dept == "AI Engineer")
+        if(this.dept == "HR" || this.dept == "IT")
         {
             return "Salary After 10% Bonus: " + (this.#salary + (this.#salary*0.1));
         }
         return "No Bonus for this dept. " + this.#salary;
     }
 
+    // calculating tax
+    tax()
+    {
+        return "Tax on " + this.#salary + " = " + (0.08*this.#salary);
+    }
+
+    // final salary after tax and bonus
+    finalSalary()
+    {
+        return "Final Salary after Tax and Bonus: " + (this.#salary + ((this.#salary*0.1)-(this.#salary*0.08))) + " \n ------------------------------------------------------------------------ ";
+    }
+
 }
 
-let employee1 = new Employee(1001, "Rahul", "Sharma", "Frontend Web Developer", 70000, 5);
-let employee2 = new Employee(1002, "Guriqbal", "Singh", "SEO Specialist", 50000, 3);
+let employee1 = new Employee(1001, "Rahul", "Sharma", "HR", 70000, 5);
+let employee2 = new Employee(1002, "Guriqbal", "Singh", "Marketing", 50000, 3);
+let employee3 = new Employee(1003, "Umesh", "Singh", "IT", 50000, 2);
+let employee4 = new Employee(1004, "Basant", "Thakur", "Finance", 50000, 10);
+let employee5 = new Employee(1005, "Subhash", "Sharma", "Sales", 40000, 3);
+let employee6 = new Employee(1006, "Anil", "Singh", "Design", 40000, 4);
 
 // Employee1
 console.log(employee1.employeeDetail());
 console.log(employee1.yearlySal);
 console.log(employee1.bonus());
+console.log(employee1.tax());
+console.log(employee1.finalSalary());
 
 // Employee2
 console.log(employee2.employeeDetail());
 console.log(employee2.yearlySal);
 console.log(employee2.bonus());
+console.log(employee2.tax());
+console.log(employee2.finalSalary());
+
+// Employee3
+console.log(employee3.employeeDetail());
+console.log(employee3.yearlySal);
+console.log(employee3.bonus());
+console.log(employee3.tax());
+console.log(employee3.finalSalary());
+
+// Employee4
+console.log(employee4.employeeDetail());
+console.log(employee4.yearlySal);
+console.log(employee4.bonus());
+console.log(employee4.tax());
+console.log(employee4.finalSalary());
+
+// Employee5
+console.log(employee5.employeeDetail());
+console.log(employee5.yearlySal);
+console.log(employee5.bonus());
+console.log(employee5.tax());
+console.log(employee5.finalSalary());
+
+// Employee6
+console.log(employee6.employeeDetail());
+console.log(employee6.yearlySal);
+console.log(employee6.bonus());
+console.log(employee6.tax());
+console.log(employee6.finalSalary());
