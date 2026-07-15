@@ -26,6 +26,12 @@ class Employee
         return "Employee Id: " + this.empid + " . Employee Name: " + this.fname + " " + this.lname + " . Employee Department: " + this.dept + " . Employee Salary: " + this.#salary + " . Employee Years of Experience: " + this.#yrexperience;
     }
 
+    // monthly salary
+    monthlySalary()
+    {
+        return this.#salary;
+    }
+
     // annual salary
     annualSalary()
     {
@@ -126,3 +132,23 @@ employees.forEach(e=>
 
 }
 )
+
+// defining a varibale for highest salary and employee name
+let highestSalary = 0;
+let empName;
+
+// finding the highest paid employee
+employees.forEach(emp=>
+{
+    if(highestSalary<emp.monthlySalary())
+    {
+        highestSalary+=emp.monthlySalary();
+        empName = emp.fname;
+    }
+}
+);
+
+// printing the highest paid salary and employee name
+console.log("Highest Paid Employee: " + empName + " . Highest Paid Salary: " + highestSalary);
+
+
