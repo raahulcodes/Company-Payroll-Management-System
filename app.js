@@ -137,6 +137,7 @@ employees.forEach(e=>
 let highestSalary = 0;
 let empName;
 let highestExperience = 0;
+let totalSalary = 0;
 
 // finding the highest paid employee
 employees.forEach(emp=>
@@ -164,6 +165,18 @@ employees.forEach(emp=>
 );
 
 // printing the highest paid salary and employee name
-console.log("Most Experienced Employee: " + empName + " . Highest Experience: " + highestExperience);
+console.log("Most Experienced Employee:: " + empName + " . Highest Experience: " + highestExperience);
+
+// finding totals
+employees.forEach(emp=>
+{
+    totalSalary+=emp.monthlySalary();
+}
+);
+
+// printing the total no of employees, total expenditure on salary, total average salary
+console.log("Total No. of Employees: " + employees.length + 
+            "\nTotal Salary: " + totalSalary + 
+            "\nAverage Salary: " + (totalSalary/employees.length));
 
 
