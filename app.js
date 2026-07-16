@@ -136,6 +136,7 @@ employees.forEach(e=>
 // defining a varibale for highest salary and employee name
 let highestSalary = 0;
 let empName;
+let highestExperience = 0;
 
 // finding the highest paid employee
 employees.forEach(emp=>
@@ -143,12 +144,26 @@ employees.forEach(emp=>
     if(highestSalary<emp.monthlySalary())
     {
         highestSalary+=emp.monthlySalary();
-        empName = emp.fname;
+        empName = emp.fname + " " + emp.lname;
     }
 }
 );
 
 // printing the highest paid salary and employee name
 console.log("Highest Paid Employee: " + empName + " . Highest Paid Salary: " + highestSalary);
+
+// finding the highest experience employee
+employees.forEach(emp=>
+{
+    if(highestExperience<emp.exp())
+    {
+        highestExperience=emp.exp();
+        empName = emp.fname + " " + emp.lname;
+    }
+}
+);
+
+// printing the highest paid salary and employee name
+console.log("Most Experienced Employee: " + empName + " . Highest Experience: " + highestExperience);
 
 
