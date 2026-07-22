@@ -5,7 +5,7 @@ let employees = [];
 class Employee
 {
 
-    // making basic salary and years of experience private
+    // making basic salary and years of experience private fields
     #salary;
     #yrexperience;
 
